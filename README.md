@@ -20,7 +20,7 @@ Layer counts include the `Background (filled)` layer. The output canvas is the `
 | Headphones | 896 × 1120 | 896 × 1120 | 5 | [headphones-sample.zip](./headphones-sample.zip) |
 | Illustration | 896 × 1120 | 896 × 1120 | 8 | [illustration-sample.zip](./illustration-sample.zip) |
 
-> **Provenance and verification:** The PSD and PNG packages for the headphones and illustration samples were assembled offline from existing public preview assets. Do not treat them as unmodified production exports. ZIP integrity and PSD file headers have been checked, but the PSD files have not yet been opened and verified in an editor. Compatibility with specific editors is not claimed.
+> **Provenance and verification:** The PSD and PNG packages for the headphones and illustration samples were assembled offline from existing public preview assets. Do not treat them as unmodified production exports. ZIP integrity and PSD file headers have been checked. All three PSD files opened in Photopea with named layers visible; detailed alignment, transparency and other editor compatibility have not been verified.
 
 ## Preview the Inputs
 
@@ -58,7 +58,7 @@ Each outer archive contains:
 <name>-sample.zip
 ├── source.webp          # Sample input image
 ├── layer-N.webp         # Layer preview images
-├── sample-layers.psd    # PSD sample; header checked, not editor verified
+├── sample-layers.psd    # PSD sample; opened in Photopea
 └── sample-layers.zip    # PNG layers and manifest.json
 ```
 
@@ -76,7 +76,7 @@ unzip inspect-coffee/sample-layers.zip -d inspect-coffee/png-layers
 
 1. **Compare previews.** View `source.webp` alongside the `layer-N.webp` files to see how elements were separated.
 2. **Inspect PNGs and metadata.** Open the PNG files against a checkerboard background and examine their transparency and dimensions. Read `manifest.json` for the output canvas and layer metadata. Paths and dimensions differ between samples.
-3. **Inspect the PSD.** If you open `sample-layers.psd` in a design tool, check whether the file opens and whether layers, visibility, alignment, transparency, and stacking appear as expected. Editor compatibility has not yet been verified for these samples.
+3. **Inspect the PSD.** If you open `sample-layers.psd` in a design tool, check whether the file opens and whether layers, visibility, alignment, transparency, and stacking appear as expected. The three samples opened in Photopea with layer names visible; detailed rendering and other editors remain unverified.
 
 ## Inspect an Archive with Python
 
@@ -86,7 +86,7 @@ The optional [inspect_sample.py](./inspect_sample.py) uses the Python 3 standard
 python3 inspect_sample.py coffee-sample.zip
 ```
 
-The check does not validate PSD rendering, layer alignment, or editor compatibility. It reads the nested ZIP into memory and is intended for the small sample archives in this repository.
+The script does not validate PSD rendering, layer alignment, or editor compatibility. It reads the nested ZIP into memory and is intended for the small sample archives in this repository.
 
 ## Evaluation Checklist
 
