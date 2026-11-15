@@ -1,0 +1,61 @@
+{
+  "samples": [
+    {
+      "id": "coffee",
+      "archive": "coffee-sample.zip",
+      "preview": "coffee-preview.webp",
+      "manifest_canvas": {
+        "width": 864,
+        "height": 1152
+      },
+      "layer_count_including_background": 5,
+      "layer_names": [
+        "Background (filled)",
+        "English headline block",
+        "Decorative leaf sprig",
+        "Coffee cup",
+        "Price badge"
+      ],
+      "provenance": "public sample"
+    },
+    {
+      "id": "headphones",
+      "archive": "headphones-sample.zip",
+      "preview": "headphones-preview.webp",
+      "manifest_canvas": {
+        "width": 896,
+        "height": 1120
+      },
+      "layer_count_including_background": 5,
+      "layer_names": [
+        "Background (filled)",
+        "Product drop shadow",
+        "Headline text SOUND, UNFOLDED",
+        "Headphones product",
+        "Price tag $129"
+      ],
+      "provenance": "assembled offline from public preview assets"
+    },
+    {
+      "id": "illustration",
+      "archive": "illustration-sample.zip",
+      "preview": "illustration-preview.webp",
+      "manifest_canvas": {
+        "width": 896,
+        "height": 1120
+      },
+      "layer_count_including_background": 8,
+      "layer_names": [
+        "Background (filled)",
+        "Left green tree",
+        "Right green tree",
+        "Sun",
+        "Left cloud",
+        "Right cloud",
+        "Yellow bicycle",
+        "Boy with red helmet"
+      ],
+      "provenance": "assembled offline from public preview assets"
+    }
+  ]
+}
