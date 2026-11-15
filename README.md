@@ -22,6 +22,14 @@ Layer counts include the `Background (filled)` layer. The output canvas is the `
 
 > **Provenance and verification:** The PSD and PNG packages for the headphones and illustration samples were assembled offline from existing public preview assets. Do not treat them as unmodified production exports. ZIP integrity and PSD file headers have been checked, but the PSD files have not yet been opened and verified in an editor. Compatibility with specific editors is not claimed.
 
+## Preview the Inputs
+
+| Coffee poster | Headphones | Illustration |
+| --- | --- | --- |
+| ![Coffee poster sample](./coffee-preview.webp) | ![Headphones sample](./headphones-preview.webp) | ![Illustration sample](./illustration-preview.webp) |
+
+These are input previews. Download the archives above to inspect the separated layers. The machine-readable [index.json](./index.json) lists each sample's manifest canvas, layer names and archive.
+
 ## What to Observe in Each Sample
 
 ### Coffee poster
@@ -69,6 +77,16 @@ unzip inspect-coffee/sample-layers.zip -d inspect-coffee/png-layers
 1. **Compare previews.** View `source.webp` alongside the `layer-N.webp` files to see how elements were separated.
 2. **Inspect PNGs and metadata.** Open the PNG files against a checkerboard background and examine their transparency and dimensions. Read `manifest.json` for the output canvas and layer metadata. Paths and dimensions differ between samples.
 3. **Inspect the PSD.** If you open `sample-layers.psd` in a design tool, check whether the file opens and whether layers, visibility, alignment, transparency, and stacking appear as expected. Editor compatibility has not yet been verified for these samples.
+
+## Inspect an Archive with Python
+
+The optional [inspect_sample.py](./inspect_sample.py) uses the Python 3 standard library to check ZIP integrity and file signatures, and lists the recorded canvas, layer names and PNG dimensions without extracting files:
+
+```bash
+python3 inspect_sample.py coffee-sample.zip
+```
+
+The check does not validate PSD rendering, layer alignment, or editor compatibility. It reads the nested ZIP into memory and is intended for the small sample archives in this repository.
 
 ## Evaluation Checklist
 
